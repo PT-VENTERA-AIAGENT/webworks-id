@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge"
 import { CheckCircle2, X, MessageCircle, Shield } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Maintenance Website Company Profile | webworks.id",
+  title: "Maintenance Website Company Profile | profio.id",
   description:
     "Layanan maintenance website company profile bulanan. 3 paket mulai Rp 500K/bln. Hosting, uptime, update konten, dan SEO bulanan.",
 }
@@ -300,7 +300,7 @@ export default function WebsiteMaintenancePage() {
             <div className="space-y-4">
               {[
                 {
-                  q: "Apakah saya perlu beli website dulu dari webworks.id?",
+                  q: "Apakah saya perlu beli website dulu dari profio.id?",
                   a: "Tidak harus. Kami bisa handle maintenance website company profile yang sudah ada — terlepas siapa yang membuatnya — setelah audit teknis singkat.",
                 },
                 {

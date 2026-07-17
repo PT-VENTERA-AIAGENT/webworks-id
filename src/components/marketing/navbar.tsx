@@ -22,7 +22,7 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-2">
             <span className="text-white font-bold text-xl tracking-tight">
-              webworks<span className="text-amber-400">.id</span>
+              profio<span className="text-amber-400">.id</span>
             </span>
           </Link>
 

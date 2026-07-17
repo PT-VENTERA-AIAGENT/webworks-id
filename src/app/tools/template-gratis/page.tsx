@@ -8,7 +8,7 @@ import { Badge } from "@/components/ui/badge"
 import TemplateGrid from "./template-grid"
 
 export const metadata: Metadata = {
-  title: "Download Template Company Profile Gratis | webworks.id",
+  title: "Download Template Company Profile Gratis | profio.id",
   description:
     "10 template company profile gratis untuk berbagai industri. Format Canva, PPT, dan Figma. Download langsung, tidak perlu kartu kredit.",
 }

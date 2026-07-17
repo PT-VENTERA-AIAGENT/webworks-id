@@ -173,7 +173,7 @@ export default function TemplateGrid() {
                   asChild
                 >
                   <Link
-                    href={`https://wa.me/6285657586700?text=${encodeURIComponent(`Halo, saya baru download template "${activeModal.name}" dari webworks.id. Ingin konsultasi lebih lanjut untuk company profile custom.`)}`}
+                    href={`https://wa.me/6285657586700?text=${encodeURIComponent(`Halo, saya baru download template "${activeModal.name}" dari profio.id. Ingin konsultasi lebih lanjut untuk company profile custom.`)}`}
                     target="_blank"
                   >
                     <MessageCircle size={16} />

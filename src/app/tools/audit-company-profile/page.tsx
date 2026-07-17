@@ -7,7 +7,7 @@ import { AlertTriangle } from "lucide-react"
 import AuditForm from "./audit-form"
 
 export const metadata: Metadata = {
-  title: "Audit Company Profile Gratis | webworks.id",
+  title: "Audit Company Profile Gratis | profio.id",
   description:
     "Audit gratis company profile Anda dalam 2 menit. Temukan 20 kesalahan fatal yang membuat bisnis Anda kehilangan klien potensial.",
 }

@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge"
 import { CheckCircle2, MessageCircle, Play, Share2 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Jasa Video Company Profile | Animasi & Sinematografi | webworks.id",
+  title: "Jasa Video Company Profile | Animasi & Sinematografi | profio.id",
   description:
     "Jasa video company profile profesional — animasi mulai Rp 5JT (add-on) dan sinematografi cinematik. Ideal untuk WhatsApp, YouTube, website hero, dan pameran dagang.",
 }

@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge"
 import { CheckCircle2, MessageCircle, Globe, Shield, X } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Jasa Company Profile Eksportir | Bilingual | webworks.id",
+  title: "Jasa Company Profile Eksportir | Bilingual | profio.id",
   description:
     "Jasa company profile untuk eksportir Indonesia. Bilingual ID + EN dengan native English review. Format disesuaikan buyer Timur Tengah, Eropa, Amerika, dan Australia.",
 }
@@ -98,19 +98,19 @@ const testimonials = [
   {
     name: "Agus Riyanto",
     company: "PT Nusantara Food Export",
-    text: "Buyer di Dubai awalnya skeptis dengan produsen Indonesia. Setelah kami kirim company profile baru dari webworks.id, 3 buyer langsung minta meeting. Kualitas Inggrisnya benar-benar beda — terasa profesional, bukan terjemahan.",
+    text: "Buyer di Dubai awalnya skeptis dengan produsen Indonesia. Setelah kami kirim company profile baru dari profio.id, 3 buyer langsung minta meeting. Kualitas Inggrisnya benar-benar beda — terasa profesional, bukan terjemahan.",
     market: "Ekspor ke Timur Tengah",
   },
   {
     name: "Dewi Lestari",
     company: "CV Herbal Nusantara",
-    text: "Kami eksportir herbal ke Eropa. webworks.id paham cara menampilkan sertifikasi EU Organic dan ISO kami dengan benar. Sekarang profile kami bisa bersaing dengan brand dari India dan China.",
+    text: "Kami eksportir herbal ke Eropa. profio.id paham cara menampilkan sertifikasi EU Organic dan ISO kami dengan benar. Sekarang profile kami bisa bersaing dengan brand dari India dan China.",
     market: "Ekspor ke Eropa",
   },
   {
     name: "Wahyu Prasetya",
     company: "PT Batik Indonesia International",
-    text: "Sudah coba 2 agensi sebelumnya — hasilnya Inggrisnya kaku dan formattingnya salah. webworks.id yang pertama menghasilkan profile yang benar-benar siap kami kirim ke buyer US tanpa malu.",
+    text: "Sudah coba 2 agensi sebelumnya — hasilnya Inggrisnya kaku dan formattingnya salah. profio.id yang pertama menghasilkan profile yang benar-benar siap kami kirim ke buyer US tanpa malu.",
     market: "Ekspor ke Amerika Serikat",
   },
 ]

@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge"
 import { CheckCircle2, MessageCircle, Shield, Heart } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Jasa Company Profile Rumah Sakit & Klinik | webworks.id",
+  title: "Jasa Company Profile Rumah Sakit & Klinik | profio.id",
   description:
     "Jasa company profile untuk rumah sakit, klinik, dan fasilitas kesehatan. Tampilkan akreditasi KARS, JCI, dan izin Kemenkes dengan benar. Membangun kepercayaan pasien dan mitra.",
 }
@@ -79,13 +79,13 @@ const testimonials = [
   {
     name: "Ns. Dewi Rahayu, S.Kep",
     company: "Klinik Pratama Sehat Bersama",
-    text: "Kami klinik kecil tapi company profile dari webworks.id membuat kami terlihat sangat profesional. Banyak pasien baru yang menyebutkan mereka percaya sejak pertama melihat profile kami.",
+    text: "Kami klinik kecil tapi company profile dari profio.id membuat kami terlihat sangat profesional. Banyak pasien baru yang menyebutkan mereka percaya sejak pertama melihat profile kami.",
     context: "Klinik Pratama, DKI Jakarta",
   },
   {
     name: "drg. Rizki Maulana, Sp.KG",
     company: "Aesthetic Dental Center",
-    text: "Untuk klinik gigi estetik, membangun kepercayaan visual adalah segalanya. webworks.id paham bagaimana menyajikan kompetensi dan sertifikasi dokter kami dengan cara yang meyakinkan.",
+    text: "Untuk klinik gigi estetik, membangun kepercayaan visual adalah segalanya. profio.id paham bagaimana menyajikan kompetensi dan sertifikasi dokter kami dengan cara yang meyakinkan.",
     context: "Klinik Gigi Estetik, Bali",
   },
 ]

@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge"
 import { Clock, ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Blog — Tips Company Profile & Brand Strategy | webworks.id",
+  title: "Blog — Tips Company Profile & Brand Strategy | profio.id",
   description:
     "Artikel tentang cara membuat company profile profesional, strategi branding, tips ekspor, dan panduan SEO untuk bisnis Indonesia.",
 }
@@ -155,7 +155,7 @@ export default function BlogPage() {
               Tips Company Profile,<br />Brand, &amp; Strategi Bisnis
             </h1>
             <p className="text-white/70 text-lg">
-              Artikel praktis dari tim webworks.id — berdasarkan pengalaman mengerjakan
+              Artikel praktis dari tim profio.id — berdasarkan pengalaman mengerjakan
               ratusan company profile di berbagai industri.
             </p>
           </div>

@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge"
 import { CheckCircle2, MessageCircle, Shield, Home } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Jasa Company Profile Developer Property | webworks.id",
+  title: "Jasa Company Profile Developer Property | profio.id",
   description:
     "Jasa company profile untuk developer property Indonesia. Meyakinkan prospek high-value, investor, dan mitra joint venture dengan presentasi portofolio proyek yang premium.",
 }
@@ -90,19 +90,19 @@ const testimonials = [
   {
     name: "Hendry Sutanto",
     company: "PT Artha Properti Nusantara",
-    text: "Sebelum pakai webworks.id, kami kesulitan meyakinkan investor joint venture. Company profile baru kami jauh lebih profesional dan berhasil membuka pintu negosiasi dengan 2 investor institusional baru.",
+    text: "Sebelum pakai profio.id, kami kesulitan meyakinkan investor joint venture. Company profile baru kami jauh lebih profesional dan berhasil membuka pintu negosiasi dengan 2 investor institusional baru.",
     context: "Developer Perumahan, Jawa Tengah",
   },
   {
     name: "Sylvia Handayani",
     company: "PT Premium Living Development",
-    text: "Untuk segmen premium, first impression adalah segalanya. Company profile dari webworks.id memiliki kualitas visual dan narasi yang setara dengan developer kakap — membuat prospek langsung serius.",
+    text: "Untuk segmen premium, first impression adalah segalanya. Company profile dari profio.id memiliki kualitas visual dan narasi yang setara dengan developer kakap — membuat prospek langsung serius.",
     context: "Developer Hunian Premium, Bali",
   },
   {
     name: "Yusuf Pradipta",
     company: "CV Griya Mandiri Sejahtera",
-    text: "Kami developer kecil yang ingin masuk segmen menengah atas. webworks.id membantu kami repositioning dengan company profile yang mempresentasikan kualitas dan komitmen kami dengan tepat.",
+    text: "Kami developer kecil yang ingin masuk segmen menengah atas. profio.id membantu kami repositioning dengan company profile yang mempresentasikan kualitas dan komitmen kami dengan tepat.",
     context: "Developer Perumahan, Sumatra Utara",
   },
 ]

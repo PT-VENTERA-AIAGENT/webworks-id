@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge"
 import { CheckCircle2, MessageCircle, Shield, Settings } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Jasa Company Profile Manufaktur | Supplier Qualification | webworks.id",
+  title: "Jasa Company Profile Manufaktur | Supplier Qualification | profio.id",
   description:
     "Jasa company profile untuk perusahaan manufaktur Indonesia. Dirancang untuk supplier qualification, audit buyer internasional, dan kemitraan industri. ISO, HACCP, GMP ready.",
 }
@@ -84,19 +84,19 @@ const testimonials = [
   {
     name: "Irwan Santoso",
     company: "PT Plastik Mandiri Indonesia",
-    text: "Company profile baru kami langsung lolos pre-qualification dari principal Jepang setelah dikirim. Tim webworks.id paham cara menampilkan kapabilitas injection molding kami dengan standar yang benar.",
+    text: "Company profile baru kami langsung lolos pre-qualification dari principal Jepang setelah dikirim. Tim profio.id paham cara menampilkan kapabilitas injection molding kami dengan standar yang benar.",
     context: "Manufaktur Plastik, Supplier Jepang",
   },
   {
     name: "Rina Kusumawati",
     company: "PT Food Manufacturing Nusantara",
-    text: "HACCP dan GMP kami sebelumnya terpendam di halaman akhir company profile lama. webworks.id merestrukturisasi semua konten dan hasilnya jauh lebih mudah dibaca oleh food safety auditor.",
+    text: "HACCP dan GMP kami sebelumnya terpendam di halaman akhir company profile lama. profio.id merestrukturisasi semua konten dan hasilnya jauh lebih mudah dibaca oleh food safety auditor.",
     context: "Manufaktur Makanan, Ekspor ASEAN",
   },
   {
     name: "Dony Prasetio",
     company: "CV Komponen Teknik Presisi",
-    text: "Kami workshop kecil tapi dengan company profile dari webworks.id, kami terlihat profesional di mata buyer otomotif besar. Kapabilitas CNC dan toleransi presisi kami sekarang tampil dengan benar.",
+    text: "Kami workshop kecil tapi dengan company profile dari profio.id, kami terlihat profesional di mata buyer otomotif besar. Kapabilitas CNC dan toleransi presisi kami sekarang tampil dengan benar.",
     context: "Manufaktur Komponen, OEM Otomotif",
   },
 ]

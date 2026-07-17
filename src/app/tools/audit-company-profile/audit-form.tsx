@@ -73,7 +73,7 @@ export default function AuditForm() {
   const rec = submitted ? getRecommendation(score) : null
 
   const waMessage = encodeURIComponent(
-    `Halo webworks.id! Saya baru selesai self-audit company profile dan skor saya ${score}/10.\n\nStatus: ${rec?.level}\n\nMohon bantu audit profesional gratis.`
+    `Halo profio.id! Saya baru selesai self-audit company profile dan skor saya ${score}/10.\n\nStatus: ${rec?.level}\n\nMohon bantu audit profesional gratis.`
   )
 
   return (

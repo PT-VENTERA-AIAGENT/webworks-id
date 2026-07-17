@@ -7,9 +7,9 @@ import { Badge } from "@/components/ui/badge"
 import { CheckCircle2, RefreshCw, AlertTriangle, MessageCircle } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Annual Refresh Subscription | Update Company Profile Tahunan | webworks.id",
+  title: "Annual Refresh Subscription | Update Company Profile Tahunan | profio.id",
   description:
-    "Langganan Annual Refresh webworks.id — Rp 1.5JT/tahun. Quarterly review, update konten berkala, dan 1 kali redesign tahunan. Company profile Anda selalu relevan.",
+    "Langganan Annual Refresh profio.id — Rp 1.5JT/tahun. Quarterly review, update konten berkala, dan 1 kali redesign tahunan. Company profile Anda selalu relevan.",
 }
 
 export default function AnnualRefreshPage() {

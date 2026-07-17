@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge"
 import { CheckCircle2, MessageCircle, Clock, AlertTriangle, Shield } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Jasa Company Profile Kontraktor | webworks.id",
+  title: "Jasa Company Profile Kontraktor | profio.id",
   description:
     "Jasa company profile kontraktor profesional — siap tender LPSE, BUMN, dan swasta. Tampilkan SBU, SKK, ISO, K3 dengan terminologi konstruksi yang tepat. Turnaround 5 hari kerja.",
 }
@@ -86,19 +86,19 @@ const testimonials = [
   {
     name: "Budi Santoso",
     company: "PT Karya Konstruksi Nusantara",
-    text: "Berhasil lolos prakualifikasi tender Pertamina senilai Rp 8 miliar setelah pakai company profile dari webworks.id. Tim mereka paham betul format yang diminta procurement BUMN.",
+    text: "Berhasil lolos prakualifikasi tender Pertamina senilai Rp 8 miliar setelah pakai company profile dari profio.id. Tim mereka paham betul format yang diminta procurement BUMN.",
     project: "Kontraktor Mekanikal, Jawa Timur",
   },
   {
     name: "Hendra Wijaya",
     company: "CV Bumi Bangun Persada",
-    text: "Deadline tender 5 hari, webworks.id deliver tepat waktu dengan kualitas yang jauh di atas ekspektasi kami. SBU dan SKK kami sekarang tampil profesional dan mudah diverifikasi.",
+    text: "Deadline tender 5 hari, profio.id deliver tepat waktu dengan kualitas yang jauh di atas ekspektasi kami. SBU dan SKK kami sekarang tampil profesional dan mudah diverifikasi.",
     project: "Kontraktor Sipil, Kalimantan Timur",
   },
   {
     name: "Rudi Hartanto",
     company: "PT Mega Cipta Konstruksi",
-    text: "Kami sudah coba 3 agensi sebelumnya dan hasilnya selalu 'standard'. webworks.id yang pertama benar-benar mengerti terminologi konstruksi dan format LPSE.",
+    text: "Kami sudah coba 3 agensi sebelumnya dan hasilnya selalu 'standard'. profio.id yang pertama benar-benar mengerti terminologi konstruksi dan format LPSE.",
     project: "Kontraktor Elektrikal, DKI Jakarta",
   },
 ]
@@ -192,7 +192,7 @@ export default function KontraktorPage() {
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-14">
               <h2 className="text-3xl sm:text-4xl font-bold text-[#0B1D4E] mb-4">
-                Apa yang Berbeda di webworks.id
+                Apa yang Berbeda di profio.id
               </h2>
               <p className="text-slate-600 max-w-2xl mx-auto">
                 Kami satu-satunya studio company profile yang memiliki template dan pengetahuan khusus untuk industri konstruksi Indonesia.

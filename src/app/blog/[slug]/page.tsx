@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       description: post.excerpt,
       type: "article",
       publishedTime: post.date,
-      authors: ["webworks.id"],
+      authors: ["profio.id"],
     },
   }
 }
@@ -201,7 +201,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   <span className="text-sm text-slate-400">Tags:</span>
                   <Badge variant="primary">{post.category}</Badge>
                   <Badge>Company Profile</Badge>
-                  <Badge>webworks.id</Badge>
+                  <Badge>profio.id</Badge>
                 </div>
 
                 {/* Post navigation */}
@@ -257,7 +257,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     asChild
                   >
                     <Link
-                      href={`https://wa.me/6285657586700?text=${encodeURIComponent(`Halo, saya baru baca artikel "${post.title}" di webworks.id dan ingin konsultasi lebih lanjut.`)}`}
+                      href={`https://wa.me/6285657586700?text=${encodeURIComponent(`Halo, saya baru baca artikel "${post.title}" di profio.id dan ingin konsultasi lebih lanjut.`)}`}
                       target="_blank"
                     >
                       <MessageCircle size={16} />

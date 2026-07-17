@@ -26,7 +26,7 @@ export function Footer() {
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="block mb-4">
               <span className="text-white font-bold text-xl">
-                webworks<span className="text-amber-400">.id</span>
+                profio<span className="text-amber-400">.id</span>
               </span>
             </Link>
             <p className="text-sm leading-relaxed mb-4">
@@ -35,7 +35,7 @@ export function Footer() {
             </p>
             <div className="space-y-1 text-sm">
               <p>WhatsApp: +62 812-3456-7890</p>
-              <p>Email: halo@webworks.id</p>
+              <p>Email: halo@profio.id</p>
             </div>
           </div>
 
@@ -95,7 +95,7 @@ export function Footer() {
         </div>
 
         <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
-          <p>&copy; {new Date().getFullYear()} webworks.id. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} profio.id. All rights reserved.</p>
           <div className="flex gap-6">
             <Link href="/privasi" className="hover:text-white transition-colors">
               Kebijakan Privasi

@@ -6,9 +6,9 @@ import { Badge } from "@/components/ui/badge"
 import { MessageCircle } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Portfolio Company Profile | webworks.id",
+  title: "Portfolio Company Profile | profio.id",
   description:
-    "Lihat hasil kerja webworks.id — 500+ company profile dari berbagai industri: kontraktor, ekspor, BUMN, manufaktur, healthcare, dan property.",
+    "Lihat hasil kerja profio.id — 500+ company profile dari berbagai industri: kontraktor, ekspor, BUMN, manufaktur, healthcare, dan property.",
 }
 
 type PortfolioItem = {

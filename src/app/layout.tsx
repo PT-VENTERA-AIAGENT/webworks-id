@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "webworks.id — Company Profile Agency #1 Indonesia",
-    template: "%s | webworks.id",
+    default: "profio.id — Company Profile Agency #1 Indonesia",
+    template: "%s | profio.id",
   },
   description:
     "Jasa pembuatan company profile profesional berbasis AI. Bilingual Indonesia–Inggris, garansi pengiriman, spesialis per industri. Kontraktor, eksportir, BUMN vendor, dan lebih.",
@@ -25,14 +25,14 @@ export const metadata: Metadata = {
     "jasa company profile bilingual",
     "company profile kontraktor",
     "company profile eksportir",
-    "webworks.id",
+    "profio.id",
   ],
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://webworks.id",
-    siteName: "webworks.id",
-    title: "webworks.id — Company Profile Agency #1 Indonesia",
+    url: "https://profio.id",
+    siteName: "profio.id",
+    title: "profio.id — Company Profile Agency #1 Indonesia",
     description:
       "Jasa pembuatan company profile profesional berbasis AI. Bilingual, garansi pengiriman, spesialis per industri.",
   },

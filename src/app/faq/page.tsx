@@ -6,9 +6,9 @@ import { Badge } from "@/components/ui/badge"
 import { MessageCircle } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "FAQ | webworks.id",
+  title: "FAQ | profio.id",
   description:
-    "Jawaban lengkap untuk 15 pertanyaan paling sering tentang jasa company profile webworks.id: harga, waktu, revisi, format file, dan lebih banyak lagi.",
+    "Jawaban lengkap untuk 15 pertanyaan paling sering tentang jasa company profile profio.id: harga, waktu, revisi, format file, dan lebih banyak lagi.",
 }
 
 const faqs = [
@@ -45,7 +45,7 @@ const faqs = [
     a: "Kami tidak menyediakan sample gratis sebelum proyek dimulai, karena setiap company profile dibuat custom. Namun Anda bisa melihat portfolio kami di halaman /portofolio untuk gambaran gaya dan kualitas kerja kami. Saat Discovery Call, kami juga bisa tunjukkan contoh proyek dari industri yang relevan dengan bisnis Anda. Konsultasi ini gratis dan tanpa komitmen.",
   },
   {
-    q: "Apakah webworks.id melayani di luar Jakarta?",
+    q: "Apakah profio.id melayani di luar Jakarta?",
     a: "Ya, kami melayani seluruh Indonesia — bahkan klien internasional. Semua proses dilakukan secara remote: Discovery Call via Zoom/Google Meet, brief via email/WhatsApp, delivery via Google Drive. Kami sudah mengerjakan proyek dari Aceh, Kalimantan, Papua, hingga klien berbasis di Singapura dan Malaysia. Tidak ada biaya tambahan untuk lokasi.",
   },
   {

@@ -144,7 +144,7 @@ export default function KalkulatorHargaPage() {
     : null
 
   const waMessage = encodeURIComponent(
-    `Halo webworks.id! Saya baru pakai kalkulator harga dan hasilnya:\n` +
+    `Halo profio.id! Saya baru pakai kalkulator harga dan hasilnya:\n` +
     `- Jenis: ${jenis}\n- Industri: ${industri}\n- Format: ${formats.join(", ")}\n- Timeline: ${timeline}\n\n` +
     `Estimasi: ${estimate?.package} ${estimate?.priceRange}\n\nMohon konsultasi lebih lanjut.`
   )

@@ -8,9 +8,9 @@ import { Badge } from "@/components/ui/badge"
 import { CheckCircle2, Minus, MessageCircle } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "webworks.id vs Fastwork — Pilih Mana untuk Company Profile?",
+  title: "profio.id vs Fastwork — Pilih Mana untuk Company Profile?",
   description:
-    "Perbandingan jujur antara webworks.id dan Fastwork untuk kebutuhan company profile Anda. Bukan tentang harga — tapi tentang hasil dan nilai jangka panjang.",
+    "Perbandingan jujur antara profio.id dan Fastwork untuk kebutuhan company profile Anda. Bukan tentang harga — tapi tentang hasil dan nilai jangka panjang.",
 }
 
 type CellValue = string | boolean | null
@@ -18,7 +18,7 @@ type CellValue = string | boolean | null
 interface ComparisonRow {
   aspect: string
   fastwork: CellValue
-  webworks: CellValue
+  profio: CellValue
   note?: string
 }
 
@@ -26,59 +26,59 @@ const rows: ComparisonRow[] = [
   {
     aspect: "Harga mulai dari",
     fastwork: "Rp 150K – 500K",
-    webworks: "Rp 2.5JT",
+    profio: "Rp 2.5JT",
     note: "Fastwork lebih murah, tapi scope sangat berbeda",
   },
   {
     aspect: "Kualitas desain",
     fastwork: "Sangat bervariasi (tergantung freelancer)",
-    webworks: "Standar premium konsisten",
+    profio: "Standar premium konsisten",
     note: "Di Fastwork, Anda perlu seleksi sendiri dari ratusan kandidat",
   },
   {
     aspect: "Versi Bilingual (ID+EN)",
     fastwork: "Add-on, tergantung freelancer",
-    webworks: true,
+    profio: true,
     note: "Semua paket Profesional ke atas sudah bilingual",
   },
   {
     aspect: "Garansi pengiriman",
     fastwork: null,
-    webworks: "Refund 10%/hari keterlambatan",
-    note: "webworks.id memberi garansi tertulis",
+    profio: "Refund 10%/hari keterlambatan",
+    note: "profio.id memberi garansi tertulis",
   },
   {
     aspect: "Timeline terukur",
     fastwork: "Tidak selalu dipenuhi",
-    webworks: "Kontrak dengan denda",
+    profio: "Kontrak dengan denda",
     note: "Freelancer seringkali mengerjakan banyak proyek paralel",
   },
   {
     aspect: "Spesialisasi industri",
     fastwork: "Generalis",
-    webworks: "Spesialis per industri (kontraktor, ekspor, BUMN, dll)",
+    profio: "Spesialis per industri (kontraktor, ekspor, BUMN, dll)",
   },
   {
     aspect: "Source file",
     fastwork: "Tergantung negosiasi",
-    webworks: "Selalu disertakan",
+    profio: "Selalu disertakan",
     note: "Canva, Figma, atau InDesign tergantung paket",
   },
   {
     aspect: "Kebijakan revisi",
     fastwork: "Biasanya 2-3 revisi",
-    webworks: "Tak terbatas dalam periode garansi",
+    profio: "Tak terbatas dalam periode garansi",
   },
   {
     aspect: "Dukungan PM (Project Manager)",
     fastwork: null,
-    webworks: "Ab Paket Enterprise",
+    profio: "Ab Paket Enterprise",
     note: "Dedicated PM yang koordinasi semua aspek proyek",
   },
   {
     aspect: "Dukungan pasca delivery",
     fastwork: null,
-    webworks: "Annual Refresh subscription tersedia",
+    profio: "Annual Refresh subscription tersedia",
     note: "Update tahunan, maintenance, dan update konten",
   },
 ]
@@ -103,7 +103,7 @@ export default function VsFastworkPage() {
               Perbandingan Jujur
             </Badge>
             <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-              webworks.id vs Fastwork:<br />Mana yang Tepat untuk Anda?
+              profio.id vs Fastwork:<br />Mana yang Tepat untuk Anda?
             </h1>
             <p className="text-white/70 text-lg">
               Kami tidak menganggap Fastwork sebagai musuh. Ini panduan jujur
@@ -135,7 +135,7 @@ export default function VsFastworkPage() {
                       Fastwork
                     </th>
                     <th className="p-5 text-center text-sm font-bold bg-[#0B1D4E] text-white w-1/3">
-                      webworks.id
+                      profio.id
                     </th>
                   </tr>
                 </thead>
@@ -159,7 +159,7 @@ export default function VsFastworkPage() {
                         <ComparisonCell value={row.fastwork} />
                       </td>
                       <td className="p-5 text-center bg-[#0B1D4E]/5">
-                        <ComparisonCell value={row.webworks} />
+                        <ComparisonCell value={row.profio} />
                       </td>
                     </tr>
                   ))}
@@ -204,14 +204,14 @@ export default function VsFastworkPage() {
                 </ul>
               </div>
 
-              {/* webworks.id */}
+              {/* profio.id */}
               <div className="bg-[#0B1D4E] rounded-2xl p-8">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-10 h-10 rounded-xl bg-amber-500 flex items-center justify-center">
                     <span className="font-bold text-white text-sm">WW</span>
                   </div>
                   <h3 className="text-xl font-bold text-white">
-                    Kapan pilih webworks.id
+                    Kapan pilih profio.id
                   </h3>
                 </div>
                 <ul className="space-y-3">
@@ -238,7 +238,7 @@ export default function VsFastworkPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-2xl font-bold text-slate-900 mb-4">
               &ldquo;Saya pernah coba Fastwork dua kali, hasilnya tidak konsisten.
-              Setelah pakai webworks.id, company profile kami lolos seleksi administrasi
+              Setelah pakai profio.id, company profile kami lolos seleksi administrasi
               tender pertama kali.&rdquo;
             </h2>
             <p className="text-slate-400 text-sm">

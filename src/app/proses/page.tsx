@@ -14,7 +14,7 @@ import {
 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Proses Kerja | webworks.id",
+  title: "Proses Kerja | profio.id",
   description:
     "5 tahap terstruktur dari Discovery Call hingga Delivery. Transparan, terukur, dan dilindungi garansi waktu.",
 }

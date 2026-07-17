@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge"
 import { CheckCircle2, MessageCircle, Globe, Search, BarChart3, Clock } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Jasa Pembuatan Website Company Profile | webworks.id",
+  title: "Jasa Pembuatan Website Company Profile | profio.id",
   description:
     "Jasa pembuatan website company profile SEO-ready. Always-on, bisa ditemukan di Google, dan ada analytics. Next.js, Vercel, domain .com/.id. Mulai dari Rp 7,5JT.",
 }

@@ -8,7 +8,7 @@ import { Badge } from "@/components/ui/badge"
 import { CheckCircle2, Minus, MessageCircle } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Freelance vs Agency untuk Company Profile | webworks.id",
+  title: "Freelance vs Agency untuk Company Profile | profio.id",
   description:
     "Panduan lengkap memilih antara freelancer atau agency untuk kebutuhan company profile bisnis Anda. Perbandingan biaya, kualitas, dan risiko.",
 }

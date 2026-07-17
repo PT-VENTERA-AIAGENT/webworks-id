@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { Shield, Clock, FileCheck, MessageCircle, CheckCircle2 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Garansi Layanan | webworks.id",
+  title: "Garansi Layanan | profio.id",
   description:
     "Garansi tertulis: Garansi Waktu, Garansi Kepuasan, dan Garansi Source File. Klaim mudah, tidak ada negosiasi.",
 }

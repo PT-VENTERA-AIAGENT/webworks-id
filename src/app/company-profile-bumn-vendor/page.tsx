@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge"
 import { CheckCircle2, MessageCircle, Shield, Building2 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Jasa Company Profile BUMN Vendor | LPSE Ready | webworks.id",
+  title: "Jasa Company Profile BUMN Vendor | LPSE Ready | profio.id",
   description:
     "Jasa company profile untuk vendor BUMN dan pemerintah. LPSE ready, format sesuai kualifikasi PLN, Pertamina, Telkom, dan BUMN subsidiaries. Garansi tepat waktu.",
 }
@@ -84,19 +84,19 @@ const testimonials = [
   {
     name: "Antonius Hartono",
     company: "PT Mitra Utama Teknologi",
-    text: "Berhasil terdaftar sebagai vendor resmi PLN setelah presentasi dengan company profile baru dari webworks.id. Tim procurement PLN terkesan dengan kelengkapan dan format dokumen kami.",
+    text: "Berhasil terdaftar sebagai vendor resmi PLN setelah presentasi dengan company profile baru dari profio.id. Tim procurement PLN terkesan dengan kelengkapan dan format dokumen kami.",
     context: "Vendor IT & Telekomunikasi, PLN",
   },
   {
     name: "Sri Wahyuni",
     company: "CV Karya Bersama Mandiri",
-    text: "Sudah 3 tahun coba daftar vendor Pertamina tapi selalu gagal di tahap administrasi. webworks.id bantu kami memahami format yang benar dan sekarang kami sudah masuk approved vendor list.",
+    text: "Sudah 3 tahun coba daftar vendor Pertamina tapi selalu gagal di tahap administrasi. profio.id bantu kami memahami format yang benar dan sekarang kami sudah masuk approved vendor list.",
     context: "Vendor Jasa, Pertamina",
   },
   {
     name: "Bambang Suryadi",
     company: "PT Solusi Digital Nusantara",
-    text: "webworks.id tidak hanya bikin company profile yang bagus — mereka tahu apa yang dicari procurement Telkom dan bagaimana mempresentasikan kemampuan teknis kami dengan tepat.",
+    text: "profio.id tidak hanya bikin company profile yang bagus — mereka tahu apa yang dicari procurement Telkom dan bagaimana mempresentasikan kemampuan teknis kami dengan tepat.",
     context: "Vendor Software, Telkom Indonesia",
   },
 ]

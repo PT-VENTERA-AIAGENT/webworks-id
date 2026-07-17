@@ -6,9 +6,9 @@ import { Badge } from "@/components/ui/badge"
 import { MessageCircle, Mail, Clock, MapPin } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Kontak | webworks.id",
+  title: "Kontak | profio.id",
   description:
-    "Hubungi webworks.id via WhatsApp, email, atau form kontak. Respons dalam 2 jam di jam kerja. Konsultasi pertama gratis.",
+    "Hubungi profio.id via WhatsApp, email, atau form kontak. Respons dalam 2 jam di jam kerja. Konsultasi pertama gratis.",
 }
 
 const packageOptions = [
@@ -94,10 +94,10 @@ export default function KontakPage() {
                       Email
                     </p>
                     <p className="text-sm text-slate-600 mb-2">
-                      halo@webworks.id
+                      halo@profio.id
                     </p>
                     <Link
-                      href="mailto:halo@webworks.id"
+                      href="mailto:halo@profio.id"
                       className="text-xs font-semibold text-blue-600 hover:text-blue-700"
                     >
                       Kirim Email →

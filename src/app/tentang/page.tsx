@@ -7,9 +7,9 @@ import { stats } from "@/data/packages"
 import { MessageCircle, Cpu, Users, Globe, Clock } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Tentang Kami | webworks.id",
+  title: "Tentang Kami | profio.id",
   description:
-    "webworks.id adalah agency company profile berbasis AI pertama di Indonesia. Didirikan oleh tim AI + human, dengan misi menjadi #1 company profile studio di Asia Tenggara.",
+    "profio.id adalah agency company profile berbasis AI pertama di Indonesia. Didirikan oleh tim AI + human, dengan misi menjadi #1 company profile studio di Asia Tenggara.",
 }
 
 const pillars = [
@@ -78,7 +78,7 @@ export default function TentangPage() {
               Berdiri sejak 2021
             </Badge>
             <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-              Tentang webworks.id
+              Tentang profio.id
             </h1>
             <p className="text-white/70 text-lg max-w-2xl mx-auto">
               Agency company profile pertama di Indonesia yang menggabungkan
@@ -100,7 +100,7 @@ export default function TentangPage() {
               </h2>
               <div className="space-y-4 text-slate-600 leading-relaxed">
                 <p>
-                  webworks.id didirikan pada 2021 oleh tim kecil yang frustrasi
+                  profio.id didirikan pada 2021 oleh tim kecil yang frustrasi
                   melihat company profile Indonesia — terlalu generik, terlalu
                   lambat dikerjakan, dan tidak pernah bicara kepada audiens
                   yang tepat.
@@ -185,7 +185,7 @@ export default function TentangPage() {
                 Tim Kami
               </Badge>
               <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">
-                Orang-orang di Balik webworks.id
+                Orang-orang di Balik profio.id
               </h2>
               <p className="text-slate-500 mt-3 max-w-xl mx-auto">
                 Bukan freelancer random. Tim inti dengan keahlian spesifik

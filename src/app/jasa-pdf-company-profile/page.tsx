@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge"
 import { CheckCircle2, MessageCircle, FileText, X, Clock } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Jasa Desain PDF Company Profile Profesional | webworks.id",
+  title: "Jasa Desain PDF Company Profile Profesional | profio.id",
   description:
     "Jasa desain PDF company profile profesional. Siap tender, WA-ready, dan cetak. Paket mulai Rp 2,5JT — draft pertama 72 jam, garansi kepuasan.",
 }
@@ -97,13 +97,13 @@ const pdfPackages = [
 ]
 
 const comparison = [
-  { feature: "Desain", webworks: "Custom per industri", freelancer: "Template generic" },
-  { feature: "Copywriting", webworks: "Industry-aware writer", freelancer: "Copy dari klien / AI mentah" },
-  { feature: "Revisi", webworks: "Tak terbatas (14–30 hari)", freelancer: "1–3 kali saja" },
-  { feature: "Bilingual", webworks: "Professional (native review)", freelancer: "Google Translate" },
-  { feature: "Source File", webworks: "Figma / InDesign / semua", freelancer: "Sering tidak disertakan" },
-  { feature: "Garansi", webworks: "Kepuasan + ketepatan waktu", freelancer: "Tidak ada" },
-  { feature: "WA-Optimized", webworks: "Selalu disertakan", freelancer: "Jarang tersedia" },
+  { feature: "Desain", profio: "Custom per industri", freelancer: "Template generic" },
+  { feature: "Copywriting", profio: "Industry-aware writer", freelancer: "Copy dari klien / AI mentah" },
+  { feature: "Revisi", profio: "Tak terbatas (14–30 hari)", freelancer: "1–3 kali saja" },
+  { feature: "Bilingual", profio: "Professional (native review)", freelancer: "Google Translate" },
+  { feature: "Source File", profio: "Figma / InDesign / semua", freelancer: "Sering tidak disertakan" },
+  { feature: "Garansi", profio: "Kepuasan + ketepatan waktu", freelancer: "Tidak ada" },
+  { feature: "WA-Optimized", profio: "Selalu disertakan", freelancer: "Jarang tersedia" },
 ]
 
 const faqs = [
@@ -255,13 +255,13 @@ export default function PdfCompanyProfilePage() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-14">
               <h2 className="text-3xl font-bold text-[#0B1D4E] mb-4">
-                webworks.id vs Freelancer Biasa
+                profio.id vs Freelancer Biasa
               </h2>
             </div>
             <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
               <div className="grid grid-cols-3 bg-[#0B1D4E] text-white text-sm font-semibold">
                 <div className="p-4">Aspek</div>
-                <div className="p-4 text-center text-amber-400">webworks.id</div>
+                <div className="p-4 text-center text-amber-400">profio.id</div>
                 <div className="p-4 text-center text-white/50">Freelancer</div>
               </div>
               {comparison.map((row, i) => (
@@ -273,7 +273,7 @@ export default function PdfCompanyProfilePage() {
                   <div className="p-4 text-center">
                     <span className="flex items-center justify-center gap-1.5 text-emerald-600 font-medium">
                       <CheckCircle2 size={14} />
-                      {row.webworks}
+                      {row.profio}
                     </span>
                   </div>
                   <div className="p-4 text-center">
