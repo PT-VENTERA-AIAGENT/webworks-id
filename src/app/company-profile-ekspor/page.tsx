@@ -10,9 +10,92 @@ export const metadata: Metadata = {
   title: "Jasa Company Profile Eksportir | Bilingual | profio.id",
   description:
     "Jasa company profile untuk eksportir Indonesia. Bilingual ID + EN dengan native English review. Format disesuaikan buyer Timur Tengah, Eropa, Amerika, dan Australia.",
+  alternates: { canonical: "https://profio.id/company-profile-ekspor" },
 }
 
 const WA_LINK = "https://wa.me/6285657586700"
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Beranda", "item": "https://profio.id" },
+    { "@type": "ListItem", "position": 2, "name": "Jasa Company Profile Eksportir", "item": "https://profio.id/company-profile-ekspor" },
+  ],
+}
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://profio.id/company-profile-ekspor#service",
+  "name": "Jasa Company Profile Eksportir Bilingual",
+  "description": "Jasa company profile untuk eksportir Indonesia. Bilingual ID + EN dengan native English review. Format disesuaikan buyer Timur Tengah, Eropa, Amerika, dan Australia.",
+  "provider": {
+    "@type": "Organization",
+    "@id": "https://profio.id/#organization",
+    "name": "profio.id",
+  },
+  "serviceType": "Company Profile",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Indonesia",
+  },
+  "url": "https://profio.id/company-profile-ekspor",
+  "offers": {
+    "@type": "Offer",
+    "price": "7500000",
+    "priceCurrency": "IDR",
+    "availability": "https://schema.org/InStock",
+    "url": "https://profio.id/paket-harga",
+  },
+}
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Apa bedanya native English review dengan sekadar terjemahan profesional?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Native English review bukan hanya menerjemahkan — editor kami menulis ulang kalimat agar terdengar alami dan meyakinkan bagi pembaca native, bukan seperti terjemahan. Ini penting karena buyer internasional langsung tahu kalau sebuah dokumen 'terasa diterjemahkan'.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Bisakah satu company profile dipakai untuk semua market?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bisa, tetapi tidak optimal. Buyer Timur Tengah memprioritaskan sertifikasi Halal dan hubungan bisnis jangka panjang. Buyer Eropa fokus pada sustainability dan standar teknis. Kami rekomendasikan minimal 2 versi untuk maksimalkan konversi.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Bagaimana cara menampilkan HS Code dan sertifikat ekspor dengan benar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kami menempatkan informasi HS Code, nomor sertifikat Halal, SNI, dan izin ekspor di seksi khusus dengan format yang mudah diverifikasi oleh compliance team buyer internasional.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Berapa lama prosesnya jika kami butuh 2 versi (2 market)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paket Premium memungkinkan 2 versi market dengan timeline 21 hari kerja. Dengan dedicated project manager, proses berjalan paralel — bukan berurutan.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah kalian bisa membantu konten untuk pameran dagang internasional?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ya, paket Premium dan Enterprise termasuk social media kit dan konten pendukung. Untuk kebutuhan khusus pameran (booth backdrop, leaflet, roll-up banner), kami bisa diskusikan sebagai add-on.",
+      },
+    },
+  ],
+}
 
 const markets = [
   { name: "Timur Tengah", flag: "🇦🇪", note: "Arab, Halal cert, HS Code" },
@@ -141,6 +224,9 @@ const faqs = [
 export default function EksporPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navbar />
       <main className="pt-16">
         {/* Hero */}

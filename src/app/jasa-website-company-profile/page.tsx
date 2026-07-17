@@ -10,9 +10,92 @@ export const metadata: Metadata = {
   title: "Jasa Pembuatan Website Company Profile | profio.id",
   description:
     "Jasa pembuatan website company profile SEO-ready. Always-on, bisa ditemukan di Google, dan ada analytics. Next.js, Vercel, domain .com/.id. Mulai dari Rp 7,5JT.",
+  alternates: { canonical: "https://profio.id/jasa-website-company-profile" },
 }
 
 const WA_LINK = "https://wa.me/6285657586700"
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Beranda", "item": "https://profio.id" },
+    { "@type": "ListItem", "position": 2, "name": "Jasa Website Company Profile", "item": "https://profio.id/jasa-website-company-profile" },
+  ],
+}
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://profio.id/jasa-website-company-profile#service",
+  "name": "Jasa Pembuatan Website Company Profile SEO-Ready",
+  "description": "Jasa pembuatan website company profile SEO-ready. Always-on, bisa ditemukan di Google, dan ada analytics. Next.js, Vercel, domain .com/.id. Mulai dari Rp 7,5JT.",
+  "provider": {
+    "@type": "Organization",
+    "@id": "https://profio.id/#organization",
+    "name": "profio.id",
+  },
+  "serviceType": "Company Profile",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Indonesia",
+  },
+  "url": "https://profio.id/jasa-website-company-profile",
+  "offers": {
+    "@type": "Offer",
+    "price": "7500000",
+    "priceCurrency": "IDR",
+    "availability": "https://schema.org/InStock",
+    "url": "https://profio.id/paket-harga",
+  },
+}
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Apakah saya perlu pengalaman teknis untuk mengelola website setelah jadi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tidak. Paket Premium ke atas sudah termasuk CMS (Content Management System) yang intuitif — Anda bisa update teks, gambar, dan konten tanpa coding. Kami juga menyediakan training singkat.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Teknologi apa yang digunakan dan kenapa itu penting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kami menggunakan Next.js dan Vercel — stack yang sama dipakai oleh perusahaan teknologi terkemuka dunia. Ini bukan sekadar 'website biasa' — hasilnya cepat, aman, dan mudah di-maintain jangka panjang.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Berapa lama website bisa online setelah proyek selesai?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Website live di hari yang sama setelah final approval Anda. Tidak ada masa tunggu hosting atau konfigurasi tambahan — semua sudah kami siapkan.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah bisa muncul di halaman 1 Google?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kami menyiapkan fondasi SEO yang tepat (struktur, kecepatan, meta, sitemap) yang diperlukan untuk bisa bersaing di Google. Posisi di halaman 1 membutuhkan waktu dan konten berkualitas — kami bisa bantu strategi SEO lanjutan sebagai layanan terpisah.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Bagaimana jika kami ingin menambah halaman setelah website jadi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Halaman tambahan tersedia sebagai add-on dengan harga per halaman. Selama periode maintenance (jika termasuk dalam paket), penambahan konten minor biasanya tidak dikenakan biaya.",
+      },
+    },
+  ],
+}
 
 const whyWebsite = [
   {
@@ -133,6 +216,9 @@ const faqs = [
 export default function WebsiteCompanyProfilePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navbar />
       <main className="pt-16">
         {/* Hero */}

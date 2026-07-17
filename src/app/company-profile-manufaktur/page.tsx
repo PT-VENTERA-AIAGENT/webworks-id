@@ -10,9 +10,92 @@ export const metadata: Metadata = {
   title: "Jasa Company Profile Manufaktur | Supplier Qualification | profio.id",
   description:
     "Jasa company profile untuk perusahaan manufaktur Indonesia. Dirancang untuk supplier qualification, audit buyer internasional, dan kemitraan industri. ISO, HACCP, GMP ready.",
+  alternates: { canonical: "https://profio.id/company-profile-manufaktur" },
 }
 
 const WA_LINK = "https://wa.me/6285657586700"
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Beranda", "item": "https://profio.id" },
+    { "@type": "ListItem", "position": 2, "name": "Jasa Company Profile Manufaktur", "item": "https://profio.id/company-profile-manufaktur" },
+  ],
+}
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://profio.id/company-profile-manufaktur#service",
+  "name": "Jasa Company Profile Manufaktur Supplier Qualification",
+  "description": "Jasa company profile untuk perusahaan manufaktur Indonesia. Dirancang untuk supplier qualification, audit buyer internasional, dan kemitraan industri. ISO, HACCP, GMP ready.",
+  "provider": {
+    "@type": "Organization",
+    "@id": "https://profio.id/#organization",
+    "name": "profio.id",
+  },
+  "serviceType": "Company Profile",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Indonesia",
+  },
+  "url": "https://profio.id/company-profile-manufaktur",
+  "offers": {
+    "@type": "Offer",
+    "price": "7500000",
+    "priceCurrency": "IDR",
+    "availability": "https://schema.org/InStock",
+    "url": "https://profio.id/paket-harga",
+  },
+}
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Apa yang dimaksud dengan 'supplier qualification document ready'?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Buyer internasional — terutama dari Jepang, Korea, dan Eropa — sering meminta company profile sebagai bagian dari dokumen supplier qualification sebelum audit fasilitas. Company profile kami dirancang untuk menjawab pertanyaan standar dalam checklist tersebut.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Bagaimana cara menampilkan kapasitas produksi dengan benar untuk buyer internasional?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kami menyajikan kapasitas dalam unit per bulan/tahun yang relevan, teknologi mesin dengan spesifikasi kunci, dan tingkat otomasi. Data ini disajikan secara visual agar mudah dipahami dalam 30 detik.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah bisa membantu manufaktur yang belum punya ISO tapi sudah dalam proses sertifikasi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ya. Kami dapat menampilkan status 'sedang dalam proses sertifikasi ISO [nomor]' dengan estimasi timeline yang kredibel, disamping sertifikasi yang sudah dimiliki.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Berapa lama proses pengerjaannya?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paket Profesional 10 hari kerja, Paket Premium 21 hari kerja. Kami menyarankan memulai minimal 3 minggu sebelum audit atau presentasi kepada principal.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah bisa dalam 3 bahasa untuk market yang berbeda?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ya, tersedia sebagai add-on untuk bahasa ketiga (Jepang, Korea, Mandarin, Arab, dll.). Hubungi kami untuk estimasi biaya tambahan.",
+      },
+    },
+  ],
+}
 
 const certifications = [
   { name: "ISO 9001", desc: "Quality Management" },
@@ -127,6 +210,9 @@ const faqs = [
 export default function ManufakturPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navbar />
       <main className="pt-16">
         {/* Hero */}

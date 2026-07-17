@@ -10,9 +10,92 @@ export const metadata: Metadata = {
   title: "Jasa Company Profile Kontraktor | profio.id",
   description:
     "Jasa company profile kontraktor profesional — siap tender LPSE, BUMN, dan swasta. Tampilkan SBU, SKK, ISO, K3 dengan terminologi konstruksi yang tepat. Turnaround 5 hari kerja.",
+  alternates: { canonical: "https://profio.id/company-profile-kontraktor" },
 }
 
 const WA_LINK = "https://wa.me/6285657586700"
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Beranda", "item": "https://profio.id" },
+    { "@type": "ListItem", "position": 2, "name": "Jasa Company Profile Kontraktor", "item": "https://profio.id/company-profile-kontraktor" },
+  ],
+}
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://profio.id/company-profile-kontraktor#service",
+  "name": "Jasa Company Profile Kontraktor",
+  "description": "Jasa company profile kontraktor profesional — siap tender LPSE, BUMN, dan swasta. Tampilkan SBU, SKK, ISO, K3 dengan terminologi konstruksi yang tepat. Turnaround 5 hari kerja.",
+  "provider": {
+    "@type": "Organization",
+    "@id": "https://profio.id/#organization",
+    "name": "profio.id",
+  },
+  "serviceType": "Company Profile",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Indonesia",
+  },
+  "url": "https://profio.id/company-profile-kontraktor",
+  "offers": {
+    "@type": "Offer",
+    "price": "2500000",
+    "priceCurrency": "IDR",
+    "availability": "https://schema.org/InStock",
+    "url": "https://profio.id/paket-harga",
+  },
+}
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Apakah kalian tahu cara menampilkan SBU Sipil vs SBU Mekanikal dengan benar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ya. Tim kami memahami subklasifikasi SBUJK berdasarkan Permen PUPR — termasuk perbedaan antara SBU Sipil (Bangunan Gedung, Jalan, Jembatan), SBU Mekanikal, dan SBU Elektrikal. Kami tahu mana yang perlu dicantumkan untuk jenis tender tertentu.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah company profile ini bisa langsung digunakan untuk LPSE?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ya. Kami menyusun konten dan format berdasarkan persyaratan dokumen kualifikasi LPSE yang umum — mencakup profil perusahaan, legalitas, SBU/SKK, track record proyek, dan SDM teknis.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Kami punya deadline tender 5 hari — apakah bisa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paket Dasar kami dirancang untuk turnaround 5 hari kerja. Jika Anda butuh lebih cepat, hubungi kami via WhatsApp dan kami akan evaluasi urgensi — ada opsi fast-track.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Bagaimana dengan kontraktor yang belum punya banyak track record proyek?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kami berpengalaman mempresentasikan kontraktor yang baru berdiri atau sedang membangun portofolio. Fokus dialihkan ke kualitas SDM, kapabilitas teknis, dan sertifikasi yang dimiliki.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah bisa bilingual untuk tender internasional atau BUMN dengan standar Inggris?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ya, paket Profesional sudah mencakup versi bilingual Indonesia + Inggris. Penerjemahan dilakukan oleh penulis yang memahami terminologi teknis konstruksi, bukan Google Translate.",
+      },
+    },
+  ],
+}
 
 const painPoints = [
   {
@@ -129,6 +212,9 @@ const faqs = [
 export default function KontraktorPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navbar />
       <main className="pt-16">
         {/* Hero */}

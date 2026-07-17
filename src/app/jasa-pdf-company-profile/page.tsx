@@ -10,9 +10,92 @@ export const metadata: Metadata = {
   title: "Jasa Desain PDF Company Profile Profesional | profio.id",
   description:
     "Jasa desain PDF company profile profesional. Siap tender, WA-ready, dan cetak. Paket mulai Rp 2,5JT — draft pertama 72 jam, garansi kepuasan.",
+  alternates: { canonical: "https://profio.id/jasa-pdf-company-profile" },
 }
 
 const WA_LINK = "https://wa.me/6285657586700"
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Beranda", "item": "https://profio.id" },
+    { "@type": "ListItem", "position": 2, "name": "Jasa Desain PDF Company Profile", "item": "https://profio.id/jasa-pdf-company-profile" },
+  ],
+}
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://profio.id/jasa-pdf-company-profile#service",
+  "name": "Jasa Desain PDF Company Profile Profesional",
+  "description": "Jasa desain PDF company profile profesional. Siap tender, WA-ready, dan cetak. Paket mulai Rp 2,5JT — draft pertama 72 jam, garansi kepuasan.",
+  "provider": {
+    "@type": "Organization",
+    "@id": "https://profio.id/#organization",
+    "name": "profio.id",
+  },
+  "serviceType": "Company Profile",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Indonesia",
+  },
+  "url": "https://profio.id/jasa-pdf-company-profile",
+  "offers": {
+    "@type": "Offer",
+    "price": "2500000",
+    "priceCurrency": "IDR",
+    "availability": "https://schema.org/InStock",
+    "url": "https://profio.id/paket-harga",
+  },
+}
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Berapa lama proses pengerjaan PDF company profile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paket Dasar 5 hari kerja, Profesional 10 hari kerja, Premium 21 hari kerja. Draft pertama selalu kami kirim dalam 72 jam setelah brief diterima.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "File apa saja yang kami dapatkan setelah selesai?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Anda mendapatkan: PDF final resolusi tinggi (print-ready), PDF versi WA-compressed, dan source file sesuai paket (Canva untuk Dasar, Figma/InDesign untuk Profesional ke atas).",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah bisa menggunakan brand guideline yang sudah kami miliki?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ya, kami selalu bekerja berdasarkan brand yang sudah ada — warna, font, dan logo Anda. Jika belum punya brand guideline, kami akan minta brief visual dari Anda.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah PDF bisa diupdate setelah jadi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Semua paket sudah termasuk revisi dalam periode tertentu. Setelah itu, update konten tersedia sebagai layanan Annual Refresh dengan harga terjangkau.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah bisa cetak juga, atau hanya digital?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Semua PDF kami adalah print-ready — sudah dengan ukuran bleed, crop marks, dan profil warna CMYK yang sesuai standar percetakan. Anda tinggal kirim ke percetakan pilihan Anda.",
+      },
+    },
+  ],
+}
 
 const whyPdf = [
   {
@@ -132,6 +215,9 @@ const faqs = [
 export default function PdfCompanyProfilePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navbar />
       <main className="pt-16">
         {/* Hero */}

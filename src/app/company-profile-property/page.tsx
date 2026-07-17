@@ -10,9 +10,92 @@ export const metadata: Metadata = {
   title: "Jasa Company Profile Developer Property | profio.id",
   description:
     "Jasa company profile untuk developer property Indonesia. Meyakinkan prospek high-value, investor, dan mitra joint venture dengan presentasi portofolio proyek yang premium.",
+  alternates: { canonical: "https://profio.id/company-profile-property" },
 }
 
 const WA_LINK = "https://wa.me/6285657586700"
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Beranda", "item": "https://profio.id" },
+    { "@type": "ListItem", "position": 2, "name": "Jasa Company Profile Developer Property", "item": "https://profio.id/company-profile-property" },
+  ],
+}
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://profio.id/company-profile-property#service",
+  "name": "Jasa Company Profile Developer Property",
+  "description": "Jasa company profile untuk developer property Indonesia. Meyakinkan prospek high-value, investor, dan mitra joint venture dengan presentasi portofolio proyek yang premium.",
+  "provider": {
+    "@type": "Organization",
+    "@id": "https://profio.id/#organization",
+    "name": "profio.id",
+  },
+  "serviceType": "Company Profile",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Indonesia",
+  },
+  "url": "https://profio.id/company-profile-property",
+  "offers": {
+    "@type": "Offer",
+    "price": "18000000",
+    "priceCurrency": "IDR",
+    "availability": "https://schema.org/InStock",
+    "url": "https://profio.id/paket-harga",
+  },
+}
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Bagaimana cara menampilkan portofolio proyek yang belum selesai / sedang berjalan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kami menyajikan proyek pipeline dengan progres aktual, target selesai, dan milestone yang sudah dicapai. Ini menunjukkan traction tanpa overpromise kepada calon investor atau pembeli.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah bisa membantu developer yang baru punya 1–2 proyek saja?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tentu. Untuk developer yang masih tumbuh, kami fokus pada kualitas eksekusi proyek yang ada, kompetensi tim, dan visi perusahaan — bukan volume portofolio.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah ada versi bilingual untuk menarik investor asing atau WNA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ya, paket Premium sudah mencakup bilingual ID + EN. Untuk investor dari Jepang, Singapura, atau Timur Tengah, kami sesuaikan tone dan konten sesuai ekspektasi mereka.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Berapa lama proses pengerjaannya?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paket Profesional 10 hari kerja, Premium 21 hari kerja, Enterprise 35 hari kerja. Semua disertai garansi refund 10% per hari jika kami terlambat.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah bisa sekaligus membuat marketing kit untuk proyek tertentu?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Company profile berfokus pada profil perusahaan, bukan properti spesifik. Untuk marketing kit proyek (brosur, website proyek, video sales), kami bisa diskusikan sebagai layanan terpisah.",
+      },
+    },
+  ],
+}
 
 const propertyFocus = [
   {
@@ -133,6 +216,9 @@ const faqs = [
 export default function PropertyPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navbar />
       <main className="pt-16">
         {/* Hero */}

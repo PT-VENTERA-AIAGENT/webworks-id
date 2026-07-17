@@ -10,9 +10,92 @@ export const metadata: Metadata = {
   title: "Jasa Company Profile Rumah Sakit & Klinik | profio.id",
   description:
     "Jasa company profile untuk rumah sakit, klinik, dan fasilitas kesehatan. Tampilkan akreditasi KARS, JCI, dan izin Kemenkes dengan benar. Membangun kepercayaan pasien dan mitra.",
+  alternates: { canonical: "https://profio.id/company-profile-healthcare" },
 }
 
 const WA_LINK = "https://wa.me/6285657586700"
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Beranda", "item": "https://profio.id" },
+    { "@type": "ListItem", "position": 2, "name": "Jasa Company Profile Healthcare", "item": "https://profio.id/company-profile-healthcare" },
+  ],
+}
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://profio.id/company-profile-healthcare#service",
+  "name": "Jasa Company Profile Rumah Sakit dan Klinik",
+  "description": "Jasa company profile untuk rumah sakit, klinik, dan fasilitas kesehatan. Tampilkan akreditasi KARS, JCI, dan izin Kemenkes dengan benar. Membangun kepercayaan pasien dan mitra.",
+  "provider": {
+    "@type": "Organization",
+    "@id": "https://profio.id/#organization",
+    "name": "profio.id",
+  },
+  "serviceType": "Company Profile",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Indonesia",
+  },
+  "url": "https://profio.id/company-profile-healthcare",
+  "offers": {
+    "@type": "Offer",
+    "price": "7500000",
+    "priceCurrency": "IDR",
+    "availability": "https://schema.org/InStock",
+    "url": "https://profio.id/paket-harga",
+  },
+}
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Apakah tim Anda memahami terminologi medis dan akreditasi KARS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ya. Tim penulis kami memiliki pengalaman bekerja dengan konten kesehatan dan memahami perbedaan akreditasi KARS (Paripurna, Utama, Madya) serta persyaratan standar JCI. Konten medis selalu melalui review untuk akurasi terminologi.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Bagaimana cara menampilkan dokter-dokter kami agar membangun kepercayaan pasien?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kami menyusun profil dokter yang mencakup pendidikan formal, fellowship/sub-spesialis, pengalaman klinisi, publikasi (jika ada), dan pendekatan perawatan. Format disesuaikan agar mudah dipahami pasien awam sekaligus meyakinkan profesional medis.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah company profile ini bisa digunakan untuk menarik mitra asuransi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ya. Untuk keperluan kerjasama dengan perusahaan asuransi atau BPJS, kami dapat menekankan kapasitas layanan, standar kualitas, dan fasilitas yang relevan dengan persyaratan kemitraan.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Bisakah membantu RS yang sedang persiapan akreditasi KARS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tentu. Company profile dapat mencerminkan komitmen RS terhadap standar kualitas dan menyebut status 'dalam proses akreditasi KARS' jika akreditasi belum selesai.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah ada versi bilingual untuk medical tourism?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ya, paket Premium sudah mencakup bilingual ID + EN. Untuk fasilitas yang menyasar pasien dari negara tertentu (misalnya Malaysia, Timur Tengah), kami bisa sesuaikan konten dan tone.",
+      },
+    },
+  ],
+}
 
 const credentialsDisplay = [
   {
@@ -116,6 +199,9 @@ const faqs = [
 export default function HealthcarePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navbar />
       <main className="pt-16">
         {/* Hero */}

@@ -10,9 +10,92 @@ export const metadata: Metadata = {
   title: "Jasa Company Profile BUMN Vendor | LPSE Ready | profio.id",
   description:
     "Jasa company profile untuk vendor BUMN dan pemerintah. LPSE ready, format sesuai kualifikasi PLN, Pertamina, Telkom, dan BUMN subsidiaries. Garansi tepat waktu.",
+  alternates: { canonical: "https://profio.id/company-profile-bumn-vendor" },
 }
 
 const WA_LINK = "https://wa.me/6285657586700"
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Beranda", "item": "https://profio.id" },
+    { "@type": "ListItem", "position": 2, "name": "Jasa Company Profile BUMN Vendor", "item": "https://profio.id/company-profile-bumn-vendor" },
+  ],
+}
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://profio.id/company-profile-bumn-vendor#service",
+  "name": "Jasa Company Profile BUMN Vendor LPSE Ready",
+  "description": "Jasa company profile untuk vendor BUMN dan pemerintah. LPSE ready, format sesuai kualifikasi PLN, Pertamina, Telkom, dan BUMN subsidiaries. Garansi tepat waktu.",
+  "provider": {
+    "@type": "Organization",
+    "@id": "https://profio.id/#organization",
+    "name": "profio.id",
+  },
+  "serviceType": "Company Profile",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Indonesia",
+  },
+  "url": "https://profio.id/company-profile-bumn-vendor",
+  "offers": {
+    "@type": "Offer",
+    "price": "2500000",
+    "priceCurrency": "IDR",
+    "availability": "https://schema.org/InStock",
+    "url": "https://profio.id/paket-harga",
+  },
+}
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Apakah company profile ini langsung bisa digunakan untuk daftar vendor BUMN?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Company profile kami dirancang sebagai bagian dari paket dokumen vendor — bukan pengganti form registrasi. Kami memastikan konten dan format company profile Anda sesuai dengan dokumen yang diminta di tahap kualifikasi awal.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "BUMN mana saja yang paling sering Anda bantu?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kami paling sering membantu vendor untuk PLN, Pertamina, Telkom, dan anak perusahaan mereka. Setiap BUMN punya preferensi format berbeda dan tim kami memahami perbedaan tersebut.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah bisa membantu vendor yang baru berdiri dan belum punya track record BUMN?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ya. Untuk perusahaan baru, kami fokus pada kompetensi SDM, sertifikasi yang dimiliki, pengalaman di sektor swasta, dan kapabilitas teknis yang relevan. Presentasi yang tepat bisa mengompensasi kurangnya track record.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Berapa lama prosesnya dan apakah ada garansi ketepatan waktu?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paket Profesional 10 hari kerja, Paket Premium 21 hari kerja. Ada garansi refund 10% per hari jika kami terlambat dari timeline yang disepakati.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah perlu briefing khusus sebelum memulai?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ya, kami lakukan sesi brief via WhatsApp atau video call (30–60 menit). Kami akan mengumpulkan informasi perusahaan, sertifikasi yang dimiliki, dan target BUMN yang ingin Anda masuki.",
+      },
+    },
+  ],
+}
 
 const bumnList = [
   { name: "PLN", category: "Energi Listrik" },
@@ -127,6 +210,9 @@ const faqs = [
 export default function BumnVendorPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navbar />
       <main className="pt-16">
         {/* Hero */}

@@ -10,9 +10,92 @@ export const metadata: Metadata = {
   title: "Jasa Video Company Profile | Animasi & Sinematografi | profio.id",
   description:
     "Jasa video company profile profesional — animasi mulai Rp 5JT (add-on) dan sinematografi cinematik. Ideal untuk WhatsApp, YouTube, website hero, dan pameran dagang.",
+  alternates: { canonical: "https://profio.id/jasa-video-company-profile" },
 }
 
 const WA_LINK = "https://wa.me/6285657586700"
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Beranda", "item": "https://profio.id" },
+    { "@type": "ListItem", "position": 2, "name": "Jasa Video Company Profile", "item": "https://profio.id/jasa-video-company-profile" },
+  ],
+}
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://profio.id/jasa-video-company-profile#service",
+  "name": "Jasa Video Company Profile Animasi dan Sinematografi",
+  "description": "Jasa video company profile profesional — animasi mulai Rp 5JT (add-on) dan sinematografi cinematik. Ideal untuk WhatsApp, YouTube, website hero, dan pameran dagang.",
+  "provider": {
+    "@type": "Organization",
+    "@id": "https://profio.id/#organization",
+    "name": "profio.id",
+  },
+  "serviceType": "Company Profile",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Indonesia",
+  },
+  "url": "https://profio.id/jasa-video-company-profile",
+  "offers": {
+    "@type": "Offer",
+    "price": "18000000",
+    "priceCurrency": "IDR",
+    "availability": "https://schema.org/InStock",
+    "url": "https://profio.id/paket-harga",
+  },
+}
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Apa perbedaan video animasi dan sinematografi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Video animasi dibuat sepenuhnya secara digital — motion graphics, ilustrasi bergerak, dan voiceover. Tidak butuh shooting. Video sinematografi adalah produksi nyata dengan kamera, kru, dan shooting di lokasi perusahaan Anda — hasilnya lebih 'nyata' dan emosional.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah saya perlu menyediakan konten (foto, video) untuk video animasi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tidak wajib. Untuk animasi, kami bekerja dengan aset yang kami buat sendiri. Jika Anda punya foto tim atau fasilitas, bisa kami integrasikan. Untuk sinematografi, semua shooting dilakukan oleh tim kami.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Berapa lama proses produksi video?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Animasi 14 hari kerja setelah brief disetujui. Sinematografi 21–28 hari kerja (termasuk pra-produksi, 1 hari shooting, dan post-production).",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Format file apa yang kami dapatkan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Anda mendapat file MP4 dalam resolusi tinggi (1080p untuk animasi, 4K untuk sinematografi), versi portrait 9:16 untuk Reels/Stories, dan versi web-compressed untuk upload cepat. Semua format distribusi standar.",
+      },
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah bisa dalam bahasa Inggris untuk perusahaan yang menyasar market internasional?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ya. Skrip bisa dalam bahasa Indonesia, Inggris, atau bilingual dengan narasi voiceover yang sesuai. Native English voiceover tersedia sebagai add-on untuk paket animasi.",
+      },
+    },
+  ],
+}
 
 const videoTypes = [
   {
@@ -174,6 +257,9 @@ const faqs = [
 export default function VideoCompanyProfilePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navbar />
       <main className="pt-16">
         {/* Hero */}
