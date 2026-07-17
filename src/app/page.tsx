@@ -7,6 +7,145 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://profio.id" },
 }
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Berapa lama pengerjaan company profile?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Bergantung paket: Dasar 5 hari, Profesional 10 hari, Premium 21 hari, Enterprise 35 hari, VIP 60 hari. Semua dilindungi garansi ketepatan waktu — terlambat = refund otomatis 10% per hari.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Apakah bisa request revisi setelah delivery?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Ya, setiap paket punya periode garansi revisi (14–60 hari tergantung paket). Di luar periode tersebut, tersedia Annual Refresh Subscription Rp 1.5JT/tahun yang mencakup 4 update per tahun.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Apakah ada biaya tersembunyi?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Tidak. Harga yang tertera sudah all-in: copywriting, desain, revisi, dan source file. Untuk klien perusahaan (badan usaha) ditambah PPN 11% sesuai ketentuan perpajakan.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Apakah bisa pesan untuk industri spesifik?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Justru itu keunggulan kami. Kami punya template dan advisor khusus untuk kontraktor, eksportir, BUMN vendor, manufaktur, healthcare, dan property. Hubungi kami untuk diskusi.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Bagaimana sistem pembayaran?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "50% DP di awal untuk mulai pengerjaan. 50% pelunasan sebelum file final diserahkan. Paket Enterprise ke atas tersedia milestone payment (30/40/30%).",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Apakah bisa konsultasi dulu sebelum pesan?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Tentu. Konsultasi pertama gratis via WhatsApp — tidak ada komitmen, tidak ada tekanan. Kami ingin memahami bisnis Anda dulu sebelum memberikan rekomendasi paket.",
+      },
+    },
+  ],
+}
+
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: "Cara Membuat Company Profile Profesional bersama profio.id",
+  description:
+    "5 tahap terstruktur dari Discovery Call hingga delivery company profile kelas dunia.",
+  step: [
+    {
+      "@type": "HowToStep",
+      position: 1,
+      name: "Brief & Discovery Call (gratis)",
+      text: "30–60 menit memahami bisnis, target market, dan tujuan komunikasi Anda.",
+      url: "https://profio.id/proses",
+    },
+    {
+      "@type": "HowToStep",
+      position: 2,
+      name: "AI-Assisted Content Draft",
+      text: "Sistem AI kami menghasilkan narasi dan struktur konten dalam 24–72 jam.",
+      url: "https://profio.id/proses",
+    },
+    {
+      "@type": "HowToStep",
+      position: 3,
+      name: "Desain & Penyempurnaan",
+      text: "Tim desainer kami mengeksekusi visual premium sesuai identitas brand Anda. 3–7 hari.",
+      url: "https://profio.id/proses",
+    },
+    {
+      "@type": "HowToStep",
+      position: 4,
+      name: "Revisi Hingga Sempurna",
+      text: "Revisi sesuai paket — tidak ada perubahan mengejutkan di luar scope.",
+      url: "https://profio.id/proses",
+    },
+    {
+      "@type": "HowToStep",
+      position: 5,
+      name: "Delivery + Launch Support",
+      text: "File final diserahkan di Hari H beserta panduan penggunaan.",
+      url: "https://profio.id/proses",
+    },
+  ],
+}
+
+const serviceSchemas = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://profio.id/company-profile-kontraktor#service",
+    name: "Company Profile untuk Kontraktor & Konstruksi",
+    description:
+      "Jasa pembuatan company profile khusus kontraktor. SBU, SKK, K3, ISO ditampilkan dengan benar. Format siap tender LPSE dan BUMN.",
+    provider: { "@id": "https://profio.id/#organization" },
+    serviceType: "Company Profile",
+    areaServed: "ID",
+    url: "https://profio.id/company-profile-kontraktor",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://profio.id/company-profile-ekspor#service",
+    name: "Company Profile untuk Eksportir",
+    description:
+      "Jasa company profile bilingual untuk eksportir. Native English editor, dikalibrasi per pasar (ME/EU/US). Lulus uji credibility buyer internasional.",
+    provider: { "@id": "https://profio.id/#organization" },
+    serviceType: "Company Profile",
+    areaServed: "ID",
+    url: "https://profio.id/company-profile-ekspor",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://profio.id/company-profile-bumn-vendor#service",
+    name: "Company Profile untuk BUMN Vendor & Rekanan",
+    description:
+      "Jasa company profile khusus vendor BUMN. Format PLN, Pertamina, Telkom. Lolos kualifikasi lebih cepat.",
+    provider: { "@id": "https://profio.id/#organization" },
+    serviceType: "Company Profile",
+    areaServed: "ID",
+    url: "https://profio.id/company-profile-bumn-vendor",
+  },
+]
+
 const WA_NUMBER = "6285657586700"
 const wa = (text: string) =>
   `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`
@@ -30,6 +169,11 @@ function WaButton({ text, pretext }: { text: string; pretext: string }) {
 export default function HomePage() {
   return (
     <div className="min-h-screen">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
+      {serviceSchemas.map((s) => (
+        <script key={s["@id"]} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
+      ))}
       <Navbar />
 
       {/* ─────────────────────────────────────────────

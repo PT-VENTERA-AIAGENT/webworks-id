@@ -13,6 +13,63 @@ export const metadata: Metadata = {
   title: "Paket Harga Company Profile",
   description:
     "Harga jasa company profile transparan. 5 paket dari Rp 2,5JT hingga Rp 120JT+. Garansi ketepatan waktu, bilingual, AI-powered. Lihat perbandingan lengkap.",
+  alternates: { canonical: "https://profio.id/paket-harga" },
+}
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Beranda", item: "https://profio.id" },
+    { "@type": "ListItem", position: 2, name: "Paket Harga", item: "https://profio.id/paket-harga" },
+  ],
+}
+
+const faqPricingSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Apakah harga sudah termasuk pajak?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Harga yang tertera adalah harga nett untuk klien perorangan. Untuk klien perusahaan (badan usaha), akan ditambahkan PPN 11% sesuai ketentuan perpajakan Indonesia.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Bagaimana sistem pembayaran jasa company profile?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "50% DP di awal untuk memulai proyek. 50% pelunasan sebelum file final diserahkan. Untuk paket Enterprise ke atas, tersedia milestone payment (30/40/30%).",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Apakah ada biaya tambahan untuk revisi company profile?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Tidak. Semua revisi dalam scope dan periode garansi sudah termasuk. Kami tidak menagih per revisi.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Bisa custom scope di luar paket company profile?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Bisa. Hubungi kami via WhatsApp untuk kebutuhan custom. Kami buat proposal khusus dalam 24 jam.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Apakah ada diskon untuk order berulang?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Ya. Untuk klien yang memesan lebih dari 1 proyek, atau klien yang perpanjang Annual Refresh subscription, ada diskon khusus. Diskusikan saat konsultasi.",
+      },
+    },
+  ],
 }
 
 const comparison = [
@@ -133,6 +190,8 @@ function Cell({ value }: { value: string | boolean | undefined }) {
 export default function PaketHargaPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPricingSchema) }} />
       <Navbar />
       <main className="pt-16">
         {/* Header */}
