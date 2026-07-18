@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "Blog — Tips Company Profile & Brand Strategy | profio.id",
   description:
     "Artikel tentang cara membuat company profile profesional, strategi branding, tips ekspor, dan panduan SEO untuk bisnis Indonesia.",
+  alternates: { canonical: "https://profio.id/blog" },
 }
 
 export interface BlogPost {
@@ -132,6 +133,39 @@ export const blogPosts: BlogPost[] = [
   },
 ]
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Beranda", item: "https://profio.id" },
+    { "@type": "ListItem", position: 2, name: "Blog", item: "https://profio.id/blog" },
+  ],
+}
+
+const collectionSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "Blog — Tips Company Profile & Brand Strategy | profio.id",
+  description: "Artikel tentang cara membuat company profile profesional, strategi branding, tips ekspor, dan panduan SEO untuk bisnis Indonesia.",
+  url: "https://profio.id/blog",
+  inLanguage: "id-ID",
+  isPartOf: { "@id": "https://profio.id/#website" },
+  publisher: { "@id": "https://profio.id/#organization" },
+}
+
+const itemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  numberOfItems: blogPosts.length,
+  itemListElement: blogPosts.map((post, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: post.title,
+    url: `https://profio.id/blog/${post.slug}`,
+    description: post.excerpt,
+  })),
+}
+
 const categories = ["Semua", "Company Profile", "Ekspor", "Konstruksi", "Desain", "SEO"]
 
 const categoryColors: Record<string, string> = {
@@ -145,6 +179,9 @@ const categoryColors: Record<string, string> = {
 export default function BlogPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <Navbar />
       <main className="pt-16">
         {/* Hero */}

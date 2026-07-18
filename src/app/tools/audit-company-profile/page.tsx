@@ -10,6 +10,74 @@ export const metadata: Metadata = {
   title: "Audit Company Profile Gratis | profio.id",
   description:
     "Audit gratis company profile Anda dalam 2 menit. Temukan 20 kesalahan fatal yang membuat bisnis Anda kehilangan klien potensial.",
+  alternates: { canonical: "https://profio.id/tools/audit-company-profile" },
+}
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Beranda", item: "https://profio.id" },
+    { "@type": "ListItem", position: 2, name: "Tools", item: "https://profio.id/tools" },
+    { "@type": "ListItem", position: 3, name: "Audit Company Profile Gratis", item: "https://profio.id/tools/audit-company-profile" },
+  ],
+}
+
+const webAppSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "@id": "https://profio.id/tools/audit-company-profile#app",
+  name: "Audit Company Profile Gratis",
+  description: "Audit gratis company profile Anda dalam 2 menit. Temukan 20 kesalahan fatal yang membuat bisnis Anda kehilangan klien potensial.",
+  url: "https://profio.id/tools/audit-company-profile",
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Web Browser",
+  inLanguage: "id-ID",
+  isAccessibleForFree: true,
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "IDR",
+    availability: "https://schema.org/InStock",
+  },
+  featureList: [
+    "Audit 20 kriteria company profile profesional",
+    "Hasil instan tanpa login",
+    "Rekomendasi spesifik per temuan",
+    "Selesai dalam 2 menit",
+  ],
+  creator: { "@id": "https://profio.id/#organization" },
+}
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Apakah audit company profile ini benar-benar gratis?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Ya, 100% gratis. Tidak perlu login, tidak perlu kartu kredit. Isi form, dapatkan hasil audit langsung.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Berapa lama waktu yang dibutuhkan untuk audit?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Kurang dari 2 menit. Anda hanya perlu menjawab beberapa pertanyaan tentang company profile Anda saat ini.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Apa yang diaudit dalam company profile saya?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Kami mengaudit 20 kriteria utama: proposisi nilai, kualitas visual, angka konkret, sertifikasi, CTA, testimonial, dan lebih banyak lagi.",
+      },
+    },
+  ],
 }
 
 const killList = [
@@ -38,6 +106,9 @@ const killList = [
 export default function AuditCompanyProfilePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navbar />
       <main className="pt-16">
         {/* Hero */}

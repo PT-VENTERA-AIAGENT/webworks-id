@@ -11,11 +11,50 @@ export const metadata: Metadata = {
   title: "Download Template Company Profile Gratis | profio.id",
   description:
     "10 template company profile gratis untuk berbagai industri. Format Canva, PPT, dan Figma. Download langsung, tidak perlu kartu kredit.",
+  alternates: { canonical: "https://profio.id/tools/template-gratis" },
+}
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Beranda", item: "https://profio.id" },
+    { "@type": "ListItem", position: 2, name: "Tools", item: "https://profio.id/tools" },
+    { "@type": "ListItem", position: 3, name: "Template Company Profile Gratis", item: "https://profio.id/tools/template-gratis" },
+  ],
+}
+
+const webAppSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "@id": "https://profio.id/tools/template-gratis#app",
+  name: "Template Company Profile Gratis",
+  description: "10 template company profile gratis untuk berbagai industri. Format Canva, PPT, dan Figma. Download langsung, tidak perlu kartu kredit.",
+  url: "https://profio.id/tools/template-gratis",
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Web Browser",
+  inLanguage: "id-ID",
+  isAccessibleForFree: true,
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "IDR",
+    availability: "https://schema.org/InStock",
+  },
+  featureList: [
+    "10 template company profile gratis",
+    "Format Canva, PowerPoint, dan Figma",
+    "Tersedia untuk 10 industri berbeda",
+    "Download langsung tanpa registrasi",
+  ],
+  creator: { "@id": "https://profio.id/#organization" },
 }
 
 export default function TemplateGratisPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }} />
       <Navbar />
       <main className="pt-16">
         {/* Hero */}

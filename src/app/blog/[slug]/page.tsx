@@ -16,18 +16,30 @@ export async function generateStaticParams() {
   return blogPosts.map((post) => ({ slug: post.slug }))
 }
 
+function parseIndonesianDate(dateStr: string): string {
+  const months: Record<string, string> = {
+    Januari: "01", Februari: "02", Maret: "03", April: "04",
+    Mei: "05", Juni: "06", Juli: "07", Agustus: "08",
+    September: "09", Oktober: "10", November: "11", Desember: "12",
+  }
+  const [day, month, year] = dateStr.split(" ")
+  return `${year}-${months[month] ?? "01"}-${day.padStart(2, "0")}`
+}
+
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
   const { slug } = await params
   const post = blogPosts.find((p) => p.slug === slug)
   if (!post) return {}
+  const isoDate = parseIndonesianDate(post.date)
   return {
     title: post.title,
     description: post.excerpt,
+    alternates: { canonical: `https://profio.id/blog/${slug}` },
     openGraph: {
       title: post.title,
       description: post.excerpt,
       type: "article",
-      publishedTime: post.date,
+      publishedTime: isoDate,
       authors: ["profio.id"],
     },
   }
@@ -141,8 +153,43 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const prevPost = currentIndex > 0 ? blogPosts[currentIndex - 1] : null
   const nextPost = currentIndex < blogPosts.length - 1 ? blogPosts[currentIndex + 1] : null
 
+  const isoDate = parseIndonesianDate(post.date)
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": `https://profio.id/blog/${post.slug}#article`,
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: isoDate,
+    dateModified: isoDate,
+    url: `https://profio.id/blog/${post.slug}`,
+    mainEntityOfPage: { "@type": "WebPage", "@id": `https://profio.id/blog/${post.slug}` },
+    inLanguage: "id-ID",
+    author: { "@type": "Organization", "@id": "https://profio.id/#organization", name: "profio.id" },
+    publisher: {
+      "@type": "Organization",
+      "@id": "https://profio.id/#organization",
+      name: "profio.id",
+      logo: { "@type": "ImageObject", url: "https://profio.id/opengraph-image" },
+    },
+    keywords: [post.category, "company profile", "profio.id"],
+  }
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Beranda", item: "https://profio.id" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://profio.id/blog" },
+      { "@type": "ListItem", position: 3, name: post.title, item: `https://profio.id/blog/${post.slug}` },
+    ],
+  }
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Navbar />
       <main className="pt-16">
         {/* Article Header */}
